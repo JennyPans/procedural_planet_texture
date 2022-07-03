@@ -1,7 +1,7 @@
 function love.conf(t)
     t.identity = nil                    -- The name of the save directory (string)
     t.appendidentity = false            -- Search files in source directory before save directory (boolean)
-    t.version = "11.3"                  -- The LÖVE version this game was made for (string)
+    t.version = "11.4"                  -- The LÖVE version this game was made for (string)
     t.console = false                   -- Attach a console (boolean, Windows only)
     t.accelerometerjoystick = true      -- Enable the accelerometer on iOS and Android by exposing it as a Joystick (boolean)
     t.externalstorage = false           -- True to save files (and read from the save directory) in external storage on Android (boolean) 
@@ -12,8 +12,8 @@ function love.conf(t)
 
     t.window.title = "Untitled"         -- The window title (string)
     t.window.icon = nil                 -- Filepath to an image to use as the window's icon (string)
-    t.window.width = 800                -- The window width (number)
-    t.window.height = 600               -- The window height (number)
+    t.window.width = 400                -- The window width (number)
+    t.window.height = 400               -- The window height (number)
     t.window.borderless = false         -- Remove all border visuals from the window (boolean)
     t.window.resizable = false          -- Let the window be user-resizable (boolean)
     t.window.minwidth = 1               -- Minimum window width if the window is resizable (number)
@@ -48,8 +48,4 @@ function love.conf(t)
     t.modules.touch = true              -- Enable the touch module (boolean)
     t.modules.video = true              -- Enable the video module (boolean)
     t.modules.window = true             -- Enable the window module (boolean)
-
-    if os.getenv("LOCAL_LUA_DEBUGGER_VSCODE") == "1" then
-        require("lldebugger").start()
-    end
 end

@@ -98,8 +98,10 @@ function world.draw()
             -- love.graphics.points(c, l)
 
             -- render sphere
-            if world.data[l][c] < 0.4 then
-                love.graphics.setColor(0.01,0.14,0.7,1)
+            if world.data[l][c] < 0.42 then
+                love.graphics.setColor(0.01,0.10,0.5,1)
+            elseif world.data[l][c] < 0.45 then
+                love.graphics.setColor(0.01,0.15,0.8,1)
             elseif world.data[l][c] < 0.5 then
                 love.graphics.setColor(0.01,0.15,0.8,1)
             elseif world.data[l][c] < 0.6 then
@@ -108,8 +110,10 @@ function world.draw()
                 love.graphics.setColor(0.01, 0.4, 0.1, 1)
             elseif world.data[l][c] <= 0.8 then
                 love.graphics.setColor(0.01, 0.8, 0.1, 1)
-            elseif world.data[l][c] <= 0.7 then
-                love.graphics.setColor(0.5, 0.9, 0.1, 1)
+            elseif world.data[l][c] <= 0.9 then
+                love.graphics.setColor(0.4, 0.7, 0.1, 1)
+            elseif world.data[l][c] <= 1.0 then
+                love.graphics.setColor(0.5, 0.80, 0.29, 1)
             end
             love.graphics.rectangle("fill", c - 1, l - 1, size, size)
         end
